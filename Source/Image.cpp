@@ -92,7 +92,7 @@ uint32_t	Image::getPixelColor(int32_t x, int32_t y) const
 
 void	Image::allocateResource(const uint8_t* pImageData)
 {
-	if (m_iWidth > 0 && m_iHeight > 0 & m_iBpp > 0)
+	if (m_iWidth > 0 && m_iHeight > 0 && m_iBpp > 0)
 	{
 		m_pImg = new uint8_t[m_iWidth * m_iHeight * m_iBpp];
 		std::memcpy(m_pImg, pImageData, m_iWidth * m_iHeight * m_iBpp);
