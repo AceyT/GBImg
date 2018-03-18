@@ -11,7 +11,7 @@ The simplest use case scenario is to give it an image and it will transform it t
 
 It can also handle the ["spritesheet" trick][spritesheet] that Sorunome explained and convert a "classic" approach of images tileset to the one that the gamebuino undertstands
 
-  $ GBImg -i <spritesheet_image_path> --spritesheet --tile-x <Number of tiles on the X axis> --tile-y <Number of tiles on the Y axis>
+  $ GBImg -i <spritesheet_image_path> --spritesheet --tile-x <X_tiles> --tile-y <Y_tiles>
 
 You can display the help with -h or --help (note that it won't execute the rest of the program if this flag is activated)
 ```
