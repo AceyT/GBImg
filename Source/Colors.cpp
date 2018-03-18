@@ -22,6 +22,16 @@ Color::Color(uint32_t _color) :
 
 }
 
+Color::Color(RGB565 _color) :
+	r(0), 
+	g(0), 
+	b(0), 
+	a(0), 
+	type(Type::RGB)
+{
+	fromRGB565(_color);
+}
+
 Color::~Color()
 {
 
@@ -168,4 +178,35 @@ void	Color::RgbToHsv()
 		h = hsv.h;
 		s = hsv.s;
 		v = hsv.v;
+}
+
+RGB565	Color::toRGB565() const
+{
+	if (isRGB())
+	{
+		return ((r & 0xF8) << 8) | ((g & 0xFC) << 3) | (b >> 3);
+	}
+	else if (isHSV())
+	{
+		Color cpy(*this);
+		cpy.toRGB();
+		return cpy.toRGB565();
+	}
+	else
+		return 0;
+}
+
+void	Color::fromRGB565(RGB565 color)
+{
+	a = 0xFF;
+	type = Type::RGB;
+
+	r = (uint8_t)((color >> 8) & 0xF8);
+	r |= r >> 5;
+	
+	g = (uint8_t)((color >> 3) & 0xFC);
+	g |= g >> 6;
+	
+	b = (uint8_t)(color << 3);
+	b |= b >> 5;
 }

@@ -3,6 +3,12 @@
 
 # include <cstdint>
 
+struct Color;
+
+using RGB888 = Color;
+using RGB565 = uint16_t;
+
+
 struct Color
 {
 	enum class Type
@@ -15,6 +21,7 @@ struct Color
 	~Color();
 	Color(uint8_t, uint8_t, uint8_t, uint8_t = 0xFF, Type = Type::RGB);
 	Color(uint32_t);
+	Color(RGB565);
 	Color(const Color& other);
 	Color& operator=(const Color& other);
 
@@ -29,6 +36,8 @@ struct Color
 	void			toHSV();
 	bool			isRGB() const;
 	bool			isHSV() const;
+	RGB565			toRGB565() const;
+	void			fromRGB565(RGB565 color);
 
 	private:
 

@@ -48,41 +48,41 @@ namespace GB
 	};
 
 	static const std::array<Color, 16> edgeColorMap = {
-		0xE4A672FF,
-		0xB86F50FF,
-		0x743F39FF,
-		0x3F2832FF,
-		0x9E2835FF,
-		0xE53B44FF,
-		0xFB922BFF,
-		0xFFE762FF,
-		0x63C64DFF,
-		0x327345FF,
-		0x193D3FFF,
-		0x4F6781FF,
-		0xAFBFD2FF,
-		0xFFFFFFFF,
-		0x2CE8F4FF,
-		0x0484D1FF
+		(uint32_t)0xE4A672FF,
+		(uint32_t)0xB86F50FF,
+		(uint32_t)0x743F39FF,
+		(uint32_t)0x3F2832FF,
+		(uint32_t)0x9E2835FF,
+		(uint32_t)0xE53B44FF,
+		(uint32_t)0xFB922BFF,
+		(uint32_t)0xFFE762FF,
+		(uint32_t)0x63C64DFF,
+		(uint32_t)0x327345FF,
+		(uint32_t)0x193D3FFF,
+		(uint32_t)0x4F6781FF,
+		(uint32_t)0xAFBFD2FF,
+		(uint32_t)0xFFFFFFFF,
+		(uint32_t)0x2CE8F4FF,
+		(uint32_t)0x0484D1FF
 	};
 
 	static const std::array<Color, 16> customColorMap = {
-		0x000000FF,
-		0xB86F50FF,
-		0x743F39FF,
-		0x3F2832FF,
-		0x9E2835FF,
-		0xE53B44FF,
-		0xFB922BFF,
-		0xFFE762FF,
-		0x63C64DFF,
-		0x327345FF,
-		0x193D3FFF,
-		0x4F6781FF,
-		0xAFBFD2FF,
-		0xFFFFFFFF,
-		0x2CE8F4FF,
-		0x0484D1FF
+		(uint32_t)0x000000FF,
+		(uint32_t)0xB86F50FF,
+		(uint32_t)0x743F39FF,
+		(uint32_t)0x3F2832FF,
+		(uint32_t)0x9E2835FF,
+		(uint32_t)0xE53B44FF,
+		(uint32_t)0xFB922BFF,
+		(uint32_t)0xFFE762FF,
+		(uint32_t)0x63C64DFF,
+		(uint32_t)0x327345FF,
+		(uint32_t)0x193D3FFF,
+		(uint32_t)0x4F6781FF,
+		(uint32_t)0xAFBFD2FF,
+		(uint32_t)0xFFFFFFFF,
+		(uint32_t)0x2CE8F4FF,
+		(uint32_t)0x0484D1FF
 	};
 
 	static const std::map<const std::string, const std::array<Color, 16> > s_mColorPalette =
