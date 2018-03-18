@@ -5,7 +5,6 @@
 #include "Options.hpp"
 #include "ImageProgram.hpp"
 
-//TODO	Handle SpriteSheet Images
 //TODO	Loading Palette from files
 //TODO	Rework MetaImg data
 //TODO	RGB_565 Conversion Colors

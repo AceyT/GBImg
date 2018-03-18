@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
-project("Img2Code")
+project("GBImg")
 
 set (CMAKE_CXX_STANDARD 11)
 
-set(EXE "Img2Code")
+set(EXE "GBImg")
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/cxxopts")
 
