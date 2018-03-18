@@ -14,7 +14,7 @@ void	debug(const IndexedImage& img)
 			printf("RGB 565]\n");
 		else
 			printf("INDEXED]\n");
-		printf("Image data pointer = [0x%08X]\n", img.imgData);
+		printf("Image data pointer = [0x%08X]\n", +img.imgData);
 		if (img.imgData != nullptr)
 		{
 			for (uint8_t y = 0 ; y < img.height ; ++y)
@@ -53,7 +53,7 @@ void	exportTo(const IndexedImage& img, const std::string& path, const std::strin
 		oFile << std::endl;
 	}
 	oFile << "};" << std::endl
-		<< "Image " << name << " = Image(" << name << "Data);" << std::endl;
+		<< "Image " << name << "(" << name << "Data);" << std::endl;
 }
 
 void	spritesheetTo(const IndexedImage& img, const std::string& path, const std::string& name, uint32_t rx, uint32_t ry)
@@ -79,5 +79,5 @@ void	spritesheetTo(const IndexedImage& img, const std::string& path, const std::
 		oFile << std::endl;
 	}
 	oFile << "};" << std::endl
-		<< "Image " << name << " = Image(" << name << "Data);" << std::endl;
+		<< "Image " << name << "(" << name << "Data);" << std::endl;
 }
