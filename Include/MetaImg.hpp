@@ -2,6 +2,7 @@
 # define META_IMG_HPP_
 
 # include <cstdint>
+# include "Colors.hpp"
 
 enum class	ColorMode : uint8_t
 {
@@ -40,7 +41,7 @@ struct	IndexedImage
 
 };
 
-struct	Meta16Image
+struct	MetaImage
 {
 	uint16_t		width{0};
 	uint16_t		height{0};
@@ -50,6 +51,24 @@ struct	Meta16Image
 	uint16_t		colorMode{(uint16_t)ColorMode::RGB_565};
 
 	uint16_t		*imgData{nullptr};
+	uint32_t		size{0};
+
+	MetaImage() {}
+	~MetaImage();
+
+	MetaImage(uint32_t, uint32_t);
+	MetaImage(const MetaImage&);
+	MetaImage& operator=(const MetaImage&);
+
+	void	allocateBuffer();
+	void	freeBuffer();
+
+	RGB565	getColor(uint16_t x, uint16_t y) const;
+	void	setColor(uint16_t x, uint16_t y, RGB565 color);
+
+	explicit operator bool() const
+	{ return (imgData != nullptr); }
+
 };
 
 
