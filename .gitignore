@@ -1,2 +1,8 @@
 build/
 .gcc-flags.json
+
+
+
+
+*.sublime-project
+*.sublime-workspace
